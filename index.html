@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biologjia Aplikative</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+}
+
+header {
+    background-color: #1e7f5c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #145c43;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 30px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #1e7f5c;
+}
+
+button {
+    background-color: #1e7f5c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #145c43;
+}
+
+footer {
+    background-color: #1e7f5c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Biologjia Aplikative</h1>
+    <p>Platformë mësimore për klasat 10, 11 dhe 12</p>
+</header>
+
+<nav>
+    <a href="#klasa10">Klasa 10</a>
+    <a href="#klasa11">Klasa 11</a>
+    <a href="#klasa12">Klasa 12</a>
+</nav>
+
+<section id="klasa10">
+    <h2>Klasa 10</h2>
+    <h3>Bazat e biologjisë</h3>
+    <p>Metoda shkencore, nivelet e organizimit të jetës.</p>
+    <button onclick="requestDownload()">Kërko Download</button>
+
+    <h3>Qeliza</h3>
+    <p>Struktura e qelizës, organelet, krahasimi prokariote – eukariote.</p>
+    <button onclick="requestDownload()">Kërko Download</button>
+</section>
+
+<section id="klasa11">
+    <h2>Klasa 11</h2>
+    <h3>ADN dhe ARN</h3>
+    <p>Struktura molekulare, replikimi, transkriptimi.</p>
+    <button onclick="requestDownload()">Kërko Download</button>
+
+    <h3>Gjenetika</h3>
+    <p>Ligjet e Mendelit, trashëgimia, sëmundjet gjenetike.</p>
+    <button onclick="requestDownload()">Kërko Download</button>
+</section>
+
+<section id="klasa12">
+    <h2>Klasa 12</h2>
+    <h3>Sistemet e trupit të njeriut</h3>
+    <p>Sistemi nervor, kardiovaskular dhe respirator.</p>
+    <button onclick="requestDownload()">Kërko Download</button>
+
+    <h3>Ekologjia dhe Bioteknologjia</h3>
+    <p>Ekosistemet, ndikimi i njeriut dhe aplikimet moderne.</p>
+    <button onclick="requestDownload()">Kërko Download</button>
+</section>
+
+<footer>
+    © 2026 Biologjia Aplikative | Të gjitha të drejtat e rezervuara
+</footer>
+
+<script>
+function requestDownload() {
+    alert("Për të shkarkuar materialin, kontaktoni administratorin për leje.");
+}
+</script>
+
+</body>
+</html>
