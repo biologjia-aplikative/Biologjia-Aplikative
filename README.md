@@ -1,16 +1,560 @@
-## Hi there 👋
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biologjia Aplikative - SHML SAHIT BAFTIU</title>
 
-<!--
-**biologjia-aplikative/biologjia-aplikative** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+    <style>
+        /* RREGULLIMET E PËRGJITHSHME */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f9;
+            line-height: 1.3;
+        }
 
-Here are some ideas to get you started:
+        /* HEADER DHE LOGO */
+        header {
+            background-color: #1e7f5c;
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+        header img.logo {
+            max-height: 80px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        /* NAVIGIMI */
+        nav {
+            background-color: #145c43;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a8e6cf;
+        }
+
+        /* SEKSIONET DHE STRUKTURA ME DY KOLONA */
+        section {
+            padding: 20px 30px;
+            margin: 20px auto;
+            max-width: 1100px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1e7f5c;
+            margin-top: 0;
+            border-bottom: 2px solid #1e7f5c;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .permbajtja-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        /* Kolona e Majtë - Mësimet */
+        .kolona-mesimeve {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        /* Kolona e Djathtë - Planprogramet & Videot */
+        .kolona-shtese {
+            flex: 1;
+            min-width: 250px;
+            background-color: #f9fbfb;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #1e7f5c;
+        }
+
+        /* STILI I TEKSTIT BRENDA SEKSIONEVE */
+        h3 {
+            margin: 8px 0 3px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+            color: #555;
+            font-size: 15px;
+        }
+
+        /* BUTONAT SHKARKO */
+        .btn {
+            background-color: #1e7f5c;
+            color: white;
+            padding: 1px 3px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #145c43;
+            transform: translateY(-1px);
+        }
+
+        /* TITUJT DHE LINQET NË KOLONËN E DJATHTË */
+        .titull-shtese {
+            font-size: 16px;
+            font-weight: bold;
+            color: #145c43;
+            margin-bottom: 10px;
+            display: block;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+        }
+
+        .link-shtese {
+            display: block;
+            color: #444;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 5px 0;
+            transition: 0.2s;
+        }
+
+        .link-shtese:hover {
+            color: #1e7f5c;
+            padding-left: 5px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #1e7f5c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo_shkolles.jpg" alt="Logo SHML Sahit Baftiu" class="logo">
+    <div>
+        <h1>SHML SAHIT BAFTIU</h1>
+        <p>Platformë mësimore - Biologjia Aplikative</p>
+    </div>
+</header>
+
+<nav>
+    <a href="#klasa10">Klasa 10</a>
+    <a href="#klasa11">Klasa 11</a>
+    <a href="#klasa12">Klasa 12</a>
+    <a href="#Fiziologjia e shtazeve dhe njeriut">Fiziologjia e shtazeve dhe njeriut</a>
+    <a href="#Biologji e mjedisit jetësor">Biologji e mjedisit jetësor</a>
+</nav>
+
+<section id="klasa10">
+    <h2>Klasa 10</h2>
+    <div class="permbajtja-flex">
+        
+        <div class="kolona-mesimeve">
+            <h3>0. BIOLOGJIA 10 Libri</h3>
+            <a href="materiale/Klasa 10/0. BIOLOGJIA 10 Libri.pdf" class="btn" download>Shkarko Prezantimin</a>            
+            <h3>1 Qeliza dhe përbërja kimike e saj</h3>
+            <a href="materiale/Klasa 10/1 Qeliza dhe përbërja kimike e saj.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>2 PARAQITJA E JETËS NË TOKË</h3>
+            <a href="materiale/Klasa 10/2 PARAQITJA E JETËS NË TOKË.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>3. ORGANELET QELIZORE 1</h3>
+            <a href="materiale/Klasa 10/3. ORGANELET QELIZORE 1.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>4. ORGANELET QELIZORE 2</h3>
+            <a href="materiale/Klasa 10/4. ORGANELET QELIZORE 2.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>5. Krahasimi i qelizave</h3>
+            <a href="materiale/Klasa 10/5. Krahasimi i qelizave.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>6. CIKLI JETЁSOR I QELIZЁS, MITOZA-MEJOZA</h3>
+            <a href="materiale/Klasa 10/6. CIKLI JETЁSOR I QELIZЁS, MITOZA-MEJOZA.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>7. METABOLIZMI QELIZOR</h3>
+            <a href="materiale/Klasa 10/7. METABOLIZMI QELIZOR.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>8. ATP-ja monedha e shkëmbimit në shndrrimet kimike</h3>
+            <a href="materiale/Klasa 10/8. ATP-ja monedha e shkëmbimit në shndrrimet kimike.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>9. Enzimet ndihmojnë reaksionet biokimike</h3>
+            <a href="materiale/Klasa 10/9. Enzimet ndihmojnë reaksionet biokimike.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>10. Fotosinteza</h3>
+            <a href="materiale/Klasa 10/10. Fotosinteza.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>11. Shndërrimi i energjisë së diellit në energji kimike</h3>
+            <a href="materiale/Klasa 10/11. Shndërrimi i energjisë së diellit në energji kimike.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>12. Energjia ruhet te përbërjet organike</h3>
+            <a href="materiale/Klasa 10/12. Energjia ruhet te përbërjet organike.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>13. Frymëmarrja aerobe</h3>
+            <a href="materiale/Klasa 10/13. Frymëmarrja aerobe.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>14. Mitokondria dhe cikli i krebsit</h3>
+            <a href="materiale/Klasa 10/14. Mitokondria dhe cikli i krebsit.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>15. Metabolizmi i lipideve dhe i proteinave</h3>
+            <a href="materiale/Klasa 10/15. Metabolizmi i lipideve dhe i proteinave.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>16. Trashëgimia dhe gjenetika Trashegimia e tiparëve dhe kromozomet</h3>
+            <a href="materiale/Klasa 10/16. Trashëgimia dhe gjenetika Trashegimia e tiparëve dhe kromozomet.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>17. Kryqëzimet e Mendelit</h3>
+            <a href="materiale/Klasa 10/17. Kryqëzimet e Mendelit.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>18. Tri ligjet e Mendelit</h3>
+            <a href="materiale/Klasa 10/18. Tri ligjet e Mendelit.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>19. Gjenotipi dhe fenotipi</h3>
+            <a href="materiale/Klasa 10/19. Gjenotipi dhe fenotipi.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>20. Studimi i trashëgimisë</h3>
+            <a href="materiale/Klasa 10/20. Studimi i trashëgimisë.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>21. Modelet e trashëgimisë janë të ndërlikuara</h3>
+            <a href="materiale/Klasa 10/21. Modelet e trashëgimisë janë të ndërlikuara.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>22. Gjenet e lidhura dhe kryqkëmbimi</h3>
+            <a href="materiale/Klasa 10/22. Gjenet e lidhura dhe kryqkëmbimi.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>23. Kromozomet e seksit</h3>
+            <a href="materiale/Klasa 10/23. Kromozomet e seksit.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>24. Sëmundjet e trashëgueshme te njeriu</h3>
+            <a href="materiale/Klasa 10/24. Sëmundjet e trashëgueshme te njeriu.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>25. Ndikimi i mjedisit mbi fenotipin</h3>
+            <a href="materiale/Klasa 10/25. Ndikimi i mjedisit mbi fenotipin.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>26. Ç’është gjeni</h3>
+            <a href="materiale/Klasa 10/26. Ç’është gjeni.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>27. Nga ADN-ja tek ARN-ja</h3>
+            <a href="materiale/Klasa 10/27. Nga ADN-ja tek ARN-ja.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>28. Kodi gjenetik, Nga ARN në proteina</h3>
+            <a href="materiale/Klasa 10/28. Kodi gjenetik, Nga ARN në proteina.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>29. Mutacionet dhe formimi i proteinave jofunksionale</h3>
+            <a href="materiale/Klasa 10/29. Mutacionet dhe formimi i proteinave jofunksionale.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>31. Bioteknologjia në fushen e bujqësisë</h3>
+            <a href="materiale/Klasa 10/31. Bioteknologjia në fushen e bujqësisë.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>33. Bioteknologjia te kafshet</h3>
+            <a href="materiale/Klasa 10/33. Bioteknologjia te kafshet.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>34. EKOLOGJIA E PERGJITHSHME</h3>
+            <a href="materiale/Klasa 10/34. EKOLOGJIA E PERGJITHSHME.ppt" class="btn" download>Shkarko Prezantimin</a>
+        </div>
+
+        <div class="kolona-shtese">
+           <div class="kolona-shtese">
+    <span class="titull-shtese">📂 Planprogramet - Klasa 10</span>
+    
+    <a href="materiale/Klasa 10/Planprogramet/Plani vjetor.doc" class="link-shtese" download>
+        📄 Plani vjetor (Word)
+    </a>
+
+    <a href="materiale/Klasa 10/Planprogramet/Plani mujor - Shtator-Qershor.doc" class="link-shtese" download>
+        📄 Plani mujor - Shtator-Qershor
+    </a>
+
+    <a href="materiale/Klasa 10/Planprogramet/Fletore pune Biologjia 10.pdf" class="link-shtese" download>
+        📕 Fletore pune Biologjia 10
+    </a>
+
+    <a href="materiale/Klasa 10/Planprogramet/Praktikum i Biologjise X.pdf" class="link-shtese" download>
+        🧪 Praktikum i Biologjisë X
+    </a>
+
+    <br>
+    <span class="titull-shtese">🎥 Videoprezentime</span>
+    <a href="#" class="link-shtese">▶️ Video: Ndërtimi i Qelizës</a>
+    <a href="#" class="link-shtese">▶️ Video: Mikroskopi</a>
+</div>
+
+    </div>
+</section>
+
+<section id="klasa11">
+    <h2>Klasa 11</h2>
+    <div class="permbajtja-flex">
+        
+        <div class="kolona-mesimeve">
+            <h3>0. BIOLOGJIA 11</h3>
+            <a href="materiale/Klasa 11/0. BIOLOGJIA 11.pdf" class="btn" download>Shkarko Prezantimin</a>
+            <h3>1. KARAKTERISTIKAT E PESË MBRETËRIVE TË QENIEVE TË GJALLA</h3>
+            <a href="materiale/Klasa 11/1. KARAKTERISTIKAT E PESË MBRETËRIVE TË QENIEVE TË GJALLA.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>2. BAKTERIET</h3>
+            <a href="materiale/Klasa 11/2. BAKTERIET.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>3. VIRUSET</h3>
+            <a href="materiale/Klasa 11/3. VIRUSET.ppt" class="btn" download>Shkarko Prezantimin</a> 
+            <h3>4. Viruset dhe sëmundjet te njerëzit</h3>
+            <a href="materiale/Klasa 11/4. Viruset dhe sëmundjet te njerëzit.ppt" class="btn" download>Shkarko Prezantimin</a> 
+            <h3>5. PROTISTET - PARAZITET</h3>
+            <a href="materiale/Klasa 11/5. PROTISTET - PARAZITET.ppt" class="btn" download>Shkarko Prezantimin</a> 
+            <h3>6. KËRPUDHAT (MYCOPHYTA)</h3>
+            <a href="materiale/Klasa 11/6. KËRPUDHAT (MYCOPHYTA).ppt" class="btn" download>Shkarko Prezantimin</a> 
+            <h3>7.8. ALGAT BLU TE GJELBRA, KUQE, SILIKATE, MURME</h3>
+            <a href="materiale/Klasa 11/7.8. ALGAT BLU TE GJELBRA, KUQE, SILIKATE, MURME.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>9. ALGAT E GJELBRA</h3>
+            <a href="materiale/Klasa 11/9. ALGAT E GJELBRA.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>10. LIKENET</h3>
+            <a href="materiale/Klasa 11/10. LIKENET.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>11. BIMËT  JOENËSORE  MYSHQET</h3>
+            <a href="materiale/Klasa 11/11. BIMËT  JOENËSORE  MYSHQET.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>12. FIERNAT (PTERIDOPHYTA)</h3>
+            <a href="materiale/Klasa 11/12. FIERNAT (PTERIDOPHYTA).ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>13. Acelomatet bilaterale – PLATODA</h3>
+            <a href="materiale/Klasa 11/13. Acelomatet bilaterale – PLATODA.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>15. Coelomata - shtazët me zgavër të vërtetë trupore</h3>
+            <a href="materiale/Klasa 11/15. Coelomata - shtazët me zgavër të vërtetë trupore.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>16. Anelida – SKRRAJAT UNAZORE</h3>
+            <a href="materiale/Klasa 11/16. Anelida – SKRRAJAT UNAZORE.ppt" class="btn" download>Shkarko Prezantimin</a> 
+        </div>
+
+        <div class="kolona-shtese">
+           <div class="kolona-shtese">
+    <span class="titull-shtese">📂 Planprogramet - Klasa 11</span>
+    
+    <a href="materiale/Klasa 11/Planprogramet/Plani vjetor.doc" class="link-shtese" download>
+        📄 Plani vjetor (Word)
+    </a>
+
+    <a href="materiale/Klasa 11/Planprogramet/Plani mujor - Shtator-Qershor.doc" class="link-shtese" download>
+        📄 Plani mujor - Shtator-Qershor
+    </a>
+
+    <a href="materiale/Klasa 10/Planprogramet/Fletore pune Biologjia 11.pdf" class="link-shtese" download>
+        📕 Fletore pune Biologjia 11
+    </a>
+
+    <a href="materiale/Klasa 10/Planprogramet/Praktikum i Biologjise X.pdf" class="link-shtese" download>
+        🧪 Praktikum i Biologjisë XI
+    </a>
+
+    <br>
+    <span class="titull-shtese">🎥 Videoprezentime</span>
+    <a href="#" class="link-shtese">▶️ Video: Ndërtimi i Qelizës</a>
+    <a href="#" class="link-shtese">▶️ Video: Mikroskopi</a>
+</div>
+
+    </div>
+</section>
+<section id="klasa12">
+    <h2>Klasa 12</h2>
+    <div class="permbajtja-flex">
+        
+        <div class="kolona-mesimeve">
+            <h3>0. Biologjia</h3>
+            <a href="materiale/Klasa 12/0. Biologjia.pdf" class="btn" download>Shkarko Prezantimin</a>
+            <h3>1. Biokimia</h3>
+            <a href="materiale/Klasa 12/1. Biokimia.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>2. VETITË E AMINOACIDEVE</h3>
+            <a href="materiale/Klasa 12/2. VETITË E AMINOACIDEVE.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>3. PROTEINAT</h3>
+            <a href="materiale/Klasa 12/3. PROTEINAT.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>4. PROTEINAT E THJESHTA</h3>
+            <a href="materiale/Klasa 12/4. PROTEINAT E THJESHTA.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>5. PROTEINAT E PËRBËRA</h3>
+            <a href="materiale/Klasa 12/5. PROTEINAT E PËRBËRA.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>6. RENDITJA E BAZAVE NE VARG DHE INFORMATA GJENETIKE</h3>
+            <a href="materiale/Klasa 12/6. RENDITJA E BAZAVE NE VARG DHE INFORMATA GJENETIKE.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>7. FOSFOPROTEINAT</h3>
+            <a href="materiale/Klasa 12/7. FOSFOPROTEINAT.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>8. KARBOHIDRATET (gluçidet)</h3>
+            <a href="materiale/Klasa 12/8. KARBOHIDRATET (gluçidet).ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>9. Fruktoza (Sheqeri i frutave )</h3>
+            <a href="materiale/Klasa 12/9. Fruktoza (Sheqeri i frutave ).ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>10. Galaktoza</h3>
+            <a href="materiale/Klasa 12/10. Galaktoza.ppt" class="btn" download>Shkarko Prezantimin</a>
+            </div>
+
+         <div class="kolona-shtese">
+           <div class="kolona-shtese">
+    <span class="titull-shtese">📂 Planprogramet - Klasa 12</span>
+    
+    <a href="materiale/Klasa 12/Planprogramet/Plani vjetor.doc" class="link-shtese" download>
+        📄 Plani vjetor (Word)
+    </a>
+
+    <a href="materiale/Klasa 12/Planprogramet/Plani mujor - Shtator-Qershor.doc" class="link-shtese" download>
+        📄 Plani mujor - Shtator-Qershor
+    </a>
+
+    <a href="materiale/Klasa 10/Planprogramet/Fletore pune Biologjia 12.pdf" class="link-shtese" download>
+        📕 Fletore pune Biologjia 12
+    </a>
+
+    <a href="materiale/Klasa 12/Planprogramet/Praktikum i Biokimisë.doc" class="link-shtese" download>
+        🧪 Praktikum i Biokimisë
+    </a>
+<a href="materiale/Klasa 12/Planprogramet/Praktikum i Fiziologjisë.doc" class="link-shtese" download>
+        🧪 Praktikum i Fiziologjisë
+    </a>
+    <br>
+    <span class="titull-shtese">🎥 Videoprezentime</span>
+    <a href="#" class="link-shtese">▶️ Video: Ndërtimi i Qelizës</a>
+    <a href="#" class="link-shtese">▶️ Video: Mikroskopi</a>
+</div>
+
+    </div>
+</section>
+     <section id="Fiziologjia e shtazeve dhe njeriut">
+     <h2>Fiziologjia e shtazeve dhe njeriut</h2>
+     <div class="permbajtja-flex">
+
+            <div class="kolona-mesimeve">
+            <h3>0. Fiziologji e shtazeve dhe njeriut</h3>
+            <a href="materiale/Fiziologjia e shtazeve dhe njeriut/0. Fiziologji e shtazeve dhe njeriut.pdf" class="btn" download>Shkarko Prezantimin</a>
+            <h3>1. QELIZA DHE ORGANELET E SAJ</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/1. QELIZA DHE ORGANELET E SAJ.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>2. INDET</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/2. INDET.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>3. Sistemi lekuror</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/3. Sistemi lekuror.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>4. LËVIZJA DHE MBËSHTETJA</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/4. LËVIZJA DHE MBËSHTETJA.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>5. Sistemi skeletor</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/5. Sistemi skeletor.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>6. Deformimet dhe sëmundjet e sistemit lokomotor</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/6. Deformimet dhe sëmundjet e sistemit lokomotor.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>7. ASPEKTI KRAHASUES I NDËRTIMIT TË ENDOSKELETIT TË KURRIZORËVE</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/7. ASPEKTI KRAHASUES I NDËRTIMIT TË ENDOSKELETIT TË KURRIZORËVE.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>8. SHKENCA MBI MUSKUJT (M Y O L O G I A)</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/8. SHKENCA MBI MUSKUJT (M Y O L O G I A).ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>9. NEURONET, NJËSI THEMELORE TË SISTEMIT NERVOR</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/9. NEURONET, NJËSI THEMELORE TË SISTEMIT NERVOR.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>10. Sistemi nervor i kurrizoreve</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/10. Sistemi nervor i kurrizoreve.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>11. Sistemi i organeve të tretjes</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/11. Sistemi i organeve të tretjes.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>12. Lëngjet trupore-hidrolimfa, hemolimfa, gjaku, limfa</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/12. Lëngjet trupore-hidrolimfa, hemolimfa, gjaku, limfa.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>13. SISTEMI IMUNOLOGJIK, Alergjia HIV-AIDS</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/13. SISTEMI IMUNOLOGJIK, Alergjia HIV-AIDS.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>14. SISTEMI I QARKULLIMIT TË GJAKUT TE KURRIZORËT</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/14. SISTEMI I QARKULLIMIT TË GJAKUT TE KURRIZORËT.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>15. SISTEMI I ORGANEVE TË FRYMËMARRJES</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/15. SISTEMI I ORGANEVE TË FRYMËMARRJES.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>16. Biokimi Funksioni i veshkeve dhe urina</h3>
+            <a href="materiale/Fiziologji e shtazeve dhe njeriut/16. Biokimi Funksioni i veshkeve dhe urina.ppt" class="btn" download>Shkarko Prezantimin</a>
+</div>
+<div class="kolona-shtese">
+           <div class="kolona-shtese">
+    <span class="titull-shtese">📂 Planprogramet - Fiziologjia</span>
+    
+    <a href="materiale/Fiziologji e shtazeve dhe njeriut/Planprogramet/Plani vjetor.doc" class="link-shtese" download>
+        📄 Plani vjetor (Word)
+    </a>
+
+    <a href="materiale/Fiziologji e shtazeve dhe njeriut/Planprogramet/Plani mujor - Shtator-Qershor.doc" class="link-shtese" download>
+        📄 Plani mujor - Shtator-Qershor
+    </a>
+
+    <a href="materiale/Fiziologji e shtazeve dhe njeriut/Planprogramet/Fletore pune Fiziologjia e shtazëve dhe njeriut.pdf" class="link-shtese" download>
+        📕 Fletore pune Fiziologjia e shtazëve dhe njeriut
+    </a>
+
+    <a href="materiale/Fiziologji e shtazeve dhe njeriut/Planprogramet/Praktikum i Biokimisë.doc" class="link-shtese" download>
+        🧪 Praktikum i Biokimisë
+    </a>
+<a href="materiale/Fiziologji e shtazeve dhe njeriut/Planprogramet/Praktikum i Fiziologjisë.doc" class="link-shtese" download>
+        🧪 Praktikum i Fiziologjisë
+    </a>
+    <br>
+    <span class="titull-shtese">🎥 Videoprezentime</span>
+    <a href="#" class="link-shtese">▶️ Video: Ndërtimi i Qelizës</a>
+    <a href="#" class="link-shtese">▶️ Video: Mikroskopi</a>
+</div>
+
+
+   </div>
+</section>
+
+<section id="Biologji e mjedisit jetësor">
+     <h2>Biologji e mjedisit jetësor</h2>
+     <div class="permbajtja-flex">
+
+            <div class="kolona-mesimeve">
+            <h3>0. BIOLOGJI E MJEDISIT JETËSOR</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/0. BIOLOGJI E MJEDISIT JETËSOR.pdf" class="btn" download>Shkarko Prezantimin</a>
+            <h3>1. KUPTIMET THEMELORE EKOLOGJIKE</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/1. KUPTIMET THEMELORE EKOLOGJIKE.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>2. Ç'janë ekosistemet</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/2. Ç'janë ekosistemet.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>3. Faktoret ekologjik kufizues</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/3. Faktoret ekologjik kufizues.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>4. FAKTORËT ABIOTIK</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/4. FAKTORËT ABIOTIK.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>5. Madhësia e popullatave</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/5. Madhësia e popullatave.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>6. Konkurenca ndërllojore dhe brendallojore</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/6. Konkurenca ndërllojore dhe brendallojore.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>7. Kategoritë trofike</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/7. Kategoritë trofike.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>8. MARRËDHËNIET TROFIKE ZINXHIRËT USHQIMORË, RRJETAT USHQIMORE DHE NIVELET TROFIKE</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/8. MARRËDHËNIET TROFIKE ZINXHIRËT USHQIMORË, RRJETAT USHQIMORE DHE NIVELET TROFIKE.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>9. Piramidat ekologjike</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/9. Piramidat ekologjike.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>10. Qarkullimi ciklik i materieve në ekosistem</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/10. Qarkullimi ciklik i materieve në ekosistem.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>11. Suksesionet ekologjike</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/11. Suksesionet ekologjike.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>12. Organizimi i biocenozave në ekosistem</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/12. Organizimi i biocenozave në ekosistem.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>13. Cikluset biogjeokimike</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/13. Cikluset biogjeokimike.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>14. Rajoni jetësor i ujërave tokësore, deteve dhe oqeaneve</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/14. Rajoni jetësor i ujërave tokësore, deteve dhe oqeaneve.ppt" class="btn" download>Shkarko Prezantimin</a>
+            <h3>15. Parazitet- Shtazët grabitqare dhe shtazët viktimë</h3>
+            <a href="materiale/Biologji e mjedisit jetësor/15. Parazitet- Shtazët grabitqare dhe shtazët viktimë.ppt" class="btn" download>Shkarko Prezantimin</a>
+
+</div> 
+    <div class="kolona-shtese">
+           <div class="kolona-shtese">
+    <span class="titull-shtese">📂 Planprogramet - Biologji e Mjed. jet.</span>
+    
+    <a href="materiale/Biologji e mjedisit jetësor/Planprogramet/Plani vjetor.doc" class="link-shtese" download>
+        📄 Plani vjetor (Word)
+    </a>
+
+    <a href="materiale/Biologji e mjedisit jetësor/Planprogramet/Plani mujor - Shtator-Qershor.doc" class="link-shtese" download>
+        📄 Plani mujor - Shtator-Qershor
+    </a>
+
+    <a href="materiale/Biologji e mjedisit jetësor/Planprogramet/Fletore pune.pdf" class="link-shtese" download>
+        📕 Fletore pune
+    </a>
+    <br>
+    <span class="titull-shtese">🎥 Videoprezentime</span>
+    <a href="#" class="link-shtese">▶️ Video: Ndërtimi i Qelizës</a>
+    <a href="#" class="link-shtese">▶️ Video: Mikroskopi</a>
+</div>
+
+    
+    </div>
+</section>
+<footer>
+    © 2026 SHML SAHIT BAFTIU | Gjilan <br>
+    Të gjitha të drejtat e rezervuara.
+</footer>
+
+</body>
+</html>
