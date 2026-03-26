@@ -173,7 +173,19 @@
     </style>
 </head>
 <body>
+<script>
+        var fjalekalimi_sakte = "biologjia"; 
+    var hyrja = prompt("Mirëseerdhët! Ju lutem shkruani fjalëkalimin për të hyrë në platformë:");
 
+    if (hyrja !== fjalekalimi_sakte) {
+        alert("Fjalëkalimi i gabuar! Qasja u mohua.");
+        // Kjo e fshin të gjithë faqen nëse fjalëkalimi është gabim
+        document.body.innerHTML = "<div style='text-align:center; margin-top:100px; font-family:Arial;'> " +
+                                  "<h1 style='color:red;'>Qasja e Mohuar</h1>" +
+                                  "<p>Ju lutem rifreskoni faqen (F5) dhe jepni fjalëkalimin e saktë.</p></div>";
+        window.stop(); // Ndalon ngarkimin e mëtejshëm të faqes
+    }
+</script>
 <header>
     <img src="logo_shkolles.jpg" alt="Logo SHML Sahit Baftiu" class="logo">
     <div>
